@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className=" bg-white md:mx-28">
         {/* navigasi */}
-        <nav className="flex flex-ro justify-between items-center h-16">
+        <nav className="flex flex-row justify-between items-center h-16">
           {/* logo */}
           <div>
             <p className="text-4xl text-primary font-bold">R.</p>
