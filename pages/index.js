@@ -83,7 +83,7 @@ export default function Home() {
         </section>
 
         {/* Hobby */}
-        <section className="md:px-28 flex flex-col md:h-[70vh] bg-[#FBFBFB]">
+        <section className="md:px-28 flex flex-col  bg-[#FBFBFB]">
           <div className="  md:w-full w-full flex flex-col justify-center items-center">
             <div className="flex flex-col items-center">
               <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Hobby</h1>
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
 
           <div className="flex md:flex-row flex-col w-full h-full mt-10">
-            {/* card */}
+            {/* card-left */}
             <div className="flex flex-col mx-4 md:w-1/2">
               {/* image */}
               <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
@@ -148,7 +148,7 @@ export default function Home() {
               <p className=" font-bold text-xl my-3"> consectetur adipiscing elit duis</p>
               <p className=" text-justify text-gray-500"> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
             </div>
-            {/* card */}
+            {/* card-left */}
 
             {/* card right */}
             <div className="flex flex-col mx-4 md:w-1/2 md:mt-0 mt-4">
