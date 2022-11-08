@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="  md:w-1/2 w-full flex flex-col justify-center items-end px-8">
+          <div className="  md:w-1/2 w-full flex flex-col justify-center items-end px-8 mb-10 md:mb-0">
             <p className=" mb-5 mt-5 text-justify">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
             <p className="text-justify">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
 
@@ -93,28 +93,28 @@ export default function Home() {
 
           {/* card hobby */}
           <div className=" w-full h-full mt-10 flex flex-row flex-wrap justify-center ">
-            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+            <div className=" md:w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
               <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
                 <Image src="/badminton.png" width={500} height={500} className="object-cover" />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
               <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
             </div>
-            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+            <div className=" md:w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
               <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
                 <Image src="/ping-pong.png" width={500} height={500} className="object-cover" />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Ping Pong</p>
               <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
             </div>
-            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+            <div className=" md:w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
               <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
                 <Image src="/badminton.png" width={500} height={500} className="object-cover" />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
               <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
             </div>
-            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+            <div className=" md:w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
               <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
                 <Image src="/badminton.png" width={500} height={500} className="object-cover" />
               </figure>
