@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
+      <main className=" container mx-auto">
         {/* navigasi */}
         <nav className="flex flex-row justify-between items-center h-16 bg-[#FBFBFB] md:px-28">
           {/* logo */}
@@ -82,6 +82,51 @@ export default function Home() {
 
         </section>
 
+        {/* Hobby */}
+        <section className="md:px-28 flex flex-col md:h-[70vh] bg-[#FBFBFB]">
+          <div className="  md:w-full w-full flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center">
+              <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Hobby</h1>
+              <div className=" w-2/3 h-1 bg-primary"></div>
+            </div>
+          </div>
+
+          {/* card hobby */}
+          <div className=" w-full h-full mt-10 flex flex-row flex-wrap justify-center ">
+            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+              <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
+                <Image src="/badminton.png" width={500} height={500} className="object-cover" />
+              </figure>
+              <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
+              <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+            </div>
+            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+              <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
+                <Image src="/ping-pong.png" width={500} height={500} className="object-cover" />
+              </figure>
+              <p className=" font-bold text-xl mt-5 mb-1">Ping Pong</p>
+              <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+            </div>
+            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+              <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
+                <Image src="/badminton.png" width={500} height={500} className="object-cover" />
+              </figure>
+              <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
+              <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+            </div>
+            <div className=" w-2/5 bg-primary/20 h-2/6 m-5 flex flex-col rounded-md p-5">
+              <figure className=" flex h-[50px] w-[50px] overflow-hidden rounded-lg justify-center">
+                <Image src="/badminton.png" width={500} height={500} className="object-cover" />
+              </figure>
+              <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
+              <p className=" text-gray-500">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* Hobby */}
 
       </main>
 
