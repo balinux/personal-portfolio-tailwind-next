@@ -128,20 +128,90 @@ export default function Home() {
 
         {/* Hobby */}
 
+        {/* Blog */}
+        <section className="md:px-28 flex flex-col ">
+          <div className="  md:w-full w-full flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center">
+              <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Blog</h1>
+              <div className=" w-2/3 h-1 bg-primary"></div>
+            </div>
+          </div>
+
+          <div className="flex md:flex-row flex-col w-full h-full mt-10">
+            {/* card */}
+            <div className="flex flex-col mx-4 md:w-1/2">
+              {/* image */}
+              <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
+                <Image src="/rio.jpg" width={500} height={500} className="object-cover" />
+              </figure>
+              {/* image */}
+              <p className=" font-bold text-xl my-3"> consectetur adipiscing elit duis</p>
+              <p className=" text-justify text-gray-500"> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+            </div>
+            {/* card */}
+
+            {/* card right */}
+            <div className="flex flex-col mx-4 md:w-1/2 md:mt-0 mt-4">
+              {/* single card */}
+              <div className="flex flex-row my-2 h-1/4 justify-center items-center">
+                <div className="flex flex-col">
+                  <p className=" font-bold text-md my-3"> consectetur adipiscing elit duis</p>
+                  <p className=" text-justify text-gray-500 md:text-sm text-xs "> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+                </div>
+                {/* image */}
+
+                <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 mx-5 bg-primary/10">
+                  <Image src="/rio.jpg" width={500} height={500} className="object-cover " />
+                </figure>
+                {/* image */}
+              </div>
+              {/* single card */}
+              {/* single card */}
+              <div className="flex flex-row my-2 h-1/4 justify-center items-center">
+                <div className="flex flex-col">
+                  <p className=" font-bold text-md my-3"> consectetur adipiscing elit duis</p>
+                  <p className=" text-justify text-gray-500 md:text-sm text-xs "> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+                </div>
+                {/* image */}
+
+                <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 mx-5 bg-primary/10">
+                  <Image src="/rio.jpg" width={500} height={500} className="object-cover " />
+                </figure>
+                {/* image */}
+              </div>
+              {/* single card */}
+
+              {/* single card */}
+              <div className="flex flex-row my-2 h-1/4 justify-center items-center">
+                <div className="flex flex-col">
+                  <p className=" font-bold text-md my-3"> consectetur adipiscing elit duis</p>
+                  <p className=" text-justify text-gray-500 md:text-sm text-xs "> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
+                </div>
+                {/* image */}
+
+                <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 mx-5 bg-primary/10">
+                  <Image src="/rio.jpg" width={500} height={500} className="object-cover " />
+                </figure>
+                {/* image */}
+              </div>
+              {/* single card */}
+
+            </div>
+            {/* card right */}
+          </div>
+        </section>
+
       </main>
 
-      {/* <footer className={styles.footer}>
+      <footer className={styles.footer} >
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https:yhotie.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{"  "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Copyright @ 2022 Rio Juniyantara Putra. design by yhotie.com
         </a>
-      </footer> */}
+      </footer>
     </div>
   );
 }
