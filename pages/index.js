@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
+import { fetchAllBlogPosts } from "../src/api/api-storyblok";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ posts }) {
+  console.log(posts);
   return (
     <div>
       <Head>
@@ -70,7 +72,7 @@ export default function Home() {
             <p className="text-justify">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
 
             <div className="flex flex-row w-full md:mt-10 mt-5">
-              <button className="bg-primary self-center md:self-start border-solid border-2 border-primary text-white p-2 rounded-md font-semibold mr-2">
+              <button className="bg-primary self-center md:self-start border-solid border-2 border-primary text-white p-2 rounded-md font-semibold mr-2 ">
                 Hobby
               </button>
 
@@ -84,7 +86,7 @@ export default function Home() {
 
         {/* Hobby */}
         <section className="md:px-28 flex flex-col  bg-[#FBFBFB]">
-          <div className="  md:w-full w-full flex flex-col justify-center items-center">
+          <div className="  md:w-full w-full flex flex-col justify-center items-center md:mb-0 md:mt-10">
             <div className="flex flex-col items-center">
               <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Hobby</h1>
               <div className=" w-2/3 h-1 bg-primary"></div>
@@ -130,7 +132,7 @@ export default function Home() {
 
         {/* Blog */}
         <section className="md:px-28 flex flex-col ">
-          <div className="  md:w-full w-full flex flex-col justify-center items-center">
+          <div className="  md:w-full w-full flex flex-col justify-center items-center md:mb-5 md:mt-10">
             <div className="flex flex-col items-center">
               <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Blog</h1>
               <div className=" w-2/3 h-1 bg-primary"></div>
@@ -142,62 +144,42 @@ export default function Home() {
             <div className="flex flex-col mx-4 md:w-1/2">
               {/* image */}
               <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
-                <Image src="/rio.jpg" width={500} height={500} className="object-cover" />
+                <Image src="/rio.jpg" width={800} height={800} className="object-cover" />
               </figure>
               {/* image */}
+              
               <p className=" font-bold text-xl my-3"> consectetur adipiscing elit duis</p>
               <p className=" text-justify text-gray-500"> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
             </div>
             {/* card-left */}
 
             {/* card right */}
-            <div className="flex flex-col mx-4 md:w-1/2 md:mt-0 mt-4">
+            <div className="flex flex-col mx-4 md:w-1/2 md:mt-0 mt-4 ">
               {/* single card */}
-              <div className="flex flex-row my-2 h-1/4 justify-center items-center">
-                <div className="flex flex-col">
-                  <p className=" font-bold text-md my-3"> consectetur adipiscing elit duis</p>
-                  <p className=" text-justify text-gray-500 md:text-sm text-xs "> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
-                </div>
-                {/* image */}
+              {
+                posts.stories.map(post => (
+                  <div key={post.id} className="flex flex-row my-2 h-1/4 justify-between items-center">
+                    <div className="flex flex-col w-1/2">
+                      {/* <p className=" font-bold text-md my-3"> {string.substring(0, 100)} {post.content.title}</p> */}
+                      <p className=" font-bold text-md my-3"> {post.content.title.substring(0, 20)}</p>
+                      <p className=" text-justify text-gray-500 md:text-sm text-xs "> {post.content.description.substring(0, 100)}</p>
+                    </div>
+                    {/* image */}
 
-                <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 mx-5 bg-primary/10">
-                  <Image src="/rio.jpg" width={500} height={500} className="object-cover " />
-                </figure>
-                {/* image */}
-              </div>
-              {/* single card */}
-              {/* single card */}
-              <div className="flex flex-row my-2 h-1/4 justify-center items-center">
-                <div className="flex flex-col">
-                  <p className=" font-bold text-md my-3"> consectetur adipiscing elit duis</p>
-                  <p className=" text-justify text-gray-500 md:text-sm text-xs "> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
-                </div>
-                {/* image */}
+                    <figure className=" flex flex-row h-full w-1/3 overflow-hidden rounded-lg justify-center items-center p-5 mx-5 xl:my-5 bg-primary/10">
+                      <Image src={post.content.image.filename} width={500} height={500} className="object-cover " />
+                      {/* <Image src="/rio.jpg" width={500} height={500} className="object-cover " /> */}
+                    </figure>
+                    {/* image */}
+                  </div>
+                ))
+              }
 
-                <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 mx-5 bg-primary/10">
-                  <Image src="/rio.jpg" width={500} height={500} className="object-cover " />
-                </figure>
-                {/* image */}
-              </div>
-              {/* single card */}
-
-              {/* single card */}
-              <div className="flex flex-row my-2 h-1/4 justify-center items-center">
-                <div className="flex flex-col">
-                  <p className=" font-bold text-md my-3"> consectetur adipiscing elit duis</p>
-                  <p className=" text-justify text-gray-500 md:text-sm text-xs "> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</p>
-                </div>
-                {/* image */}
-
-                <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 mx-5 bg-primary/10">
-                  <Image src="/rio.jpg" width={500} height={500} className="object-cover " />
-                </figure>
-                {/* image */}
-              </div>
-              {/* single card */}
+     
 
             </div>
             {/* card right */}
+
           </div>
         </section>
 
@@ -214,4 +196,13 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const posts = await fetchAllBlogPosts();
+  return {
+    props: {
+      posts
+    }
+  }
 }
