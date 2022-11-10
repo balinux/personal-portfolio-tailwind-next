@@ -47,7 +47,7 @@ export default function Home() {
 
             {/* image */}
             <div className="order-1 md:order-2 md:h-[70vh] w-full flex justify-center items-center">
-              <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
+              <figure className=" flex h-1/2 md:h-full xl:h-1/2 w-full overflow-hidden rounded-lg justify-center">
                 <Image src="/rio.jpg" width={500} height={500} className="object-cover" />
                 {/* <img className=" object-cover h-full" src="/logan.jpg" alt="" /> */}
                 {/* <Image src="/logan.jpg" width="100%" height="100%" className="object-cover h-full" /> */}
