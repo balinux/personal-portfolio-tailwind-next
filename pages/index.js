@@ -47,6 +47,7 @@ export default function Home({ posts }) {
                   width={500}
                   height={500}
                   className="object-cover"
+                  alt="no image"
                 />
                 {/* <img className=" object-cover h-full" src="/logan.jpg" alt="" /> */}
                 {/* <Image src="/logan.jpg" width="100%" height="100%" className="object-cover h-full" /> */}
@@ -110,6 +111,7 @@ export default function Home({ posts }) {
                   width={500}
                   height={500}
                   className="object-cover"
+                  alt="no image"
                 />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
@@ -126,6 +128,7 @@ export default function Home({ posts }) {
                   width={500}
                   height={500}
                   className="object-cover"
+                  alt="no image"
                 />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Ping Pong</p>
@@ -142,6 +145,7 @@ export default function Home({ posts }) {
                   width={500}
                   height={500}
                   className="object-cover"
+                  alt="no image"
                 />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
@@ -158,6 +162,7 @@ export default function Home({ posts }) {
                   width={500}
                   height={500}
                   className="object-cover"
+                  alt="no image"
                 />
               </figure>
               <p className=" font-bold text-xl mt-5 mb-1">Bulu Tangkis</p>
@@ -192,6 +197,7 @@ export default function Home({ posts }) {
                   width={800}
                   height={800}
                   className="object-cover"
+                  alt="no image"
                 />
               </figure>
               {/* image */}
@@ -233,6 +239,7 @@ export default function Home({ posts }) {
                         width={500}
                         height={500}
                         className="object-cover "
+                        alt="no image"
                       />
                       {/* <Image src="/rio.jpg" width={500} height={500} className="object-cover " /> */}
                     </figure>
