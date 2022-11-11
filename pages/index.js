@@ -24,7 +24,7 @@ export default function Home({ posts }) {
         {/* navigasi */}
 
         {/* CTA */}
-        <section className="pt-5 bg-[#FBFBFB] md:px-28">
+        <section id="home" className="pt-5 bg-[#FBFBFB] md:px-28">
           <div className="flex flex-col md:flex-row">
             {/* CTA */}
             <div className=" order-2 md:order-1 md:h-[70vh] w-screen overflow-hidden flex flex-col justify-center items-start mt-5 md:mt-0">
@@ -57,7 +57,7 @@ export default function Home({ posts }) {
         </section>
 
         {/* about me */}
-        <section className="md:px-28 flex flex-col md:flex-row ">
+        <section id="about" className="md:px-28 flex flex-col md:flex-row ">
           <div className="  md:w-1/2 w-full flex flex-col justify-center items-center">
             <div className="">
               <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-0">
@@ -94,7 +94,7 @@ export default function Home({ posts }) {
         </section>
 
         {/* Hobby */}
-        <section className="md:px-28 flex flex-col  bg-[#FBFBFB]">
+        <section id="hobby" className="md:px-28 flex flex-col  bg-[#FBFBFB]">
           <div className="  md:w-full w-full flex flex-col justify-center items-center md:mb-0 md:mt-10">
             <div className="flex flex-col items-center">
               <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Hobby</h1>
@@ -178,7 +178,7 @@ export default function Home({ posts }) {
         {/* Hobby */}
 
         {/* Blog */}
-        <section className="md:px-28 flex flex-col ">
+        <section id="blog" className="md:px-28 flex flex-col ">
           <div className="  md:w-full w-full flex flex-col justify-center items-center md:mb-5 md:mt-10">
             <div className="flex flex-col items-center">
               <h1 className=" text-4xl font-bold mb-2 mt-10 md:mt-10">Blog</h1>
