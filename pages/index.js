@@ -6,6 +6,7 @@ import Nav from "../components/nav";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ posts }) {
+  const postSlice = posts.stories.slice(1);
   return (
     <div>
       <Head>
@@ -185,37 +186,40 @@ export default function Home({ posts }) {
             </div>
           </div>
 
-          <div className="flex md:flex-row flex-col w-full h-full mt-10">
+          <div className="flex md:flex-row flex-col w-full h-full mt-10 cursor-pointer">
             {/* card-left */}
-            <div className="flex flex-col mx-4 md:w-1/2">
-              {/* image */}
-              <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
-                <Image
-                  // src="/rio.jpg"
-                  src={posts.stories[0].content.image.filename}
-                  width={800}
-                  height={800}
-                  className="object-cover"
-                  alt="no image"
-                />
-              </figure>
-              {/* image */}
+            <Link href={`/blog/${posts.stories[0].slug}`}>
 
-              <p className=" font-bold text-xl my-3">
-                {" "}
-                {posts.stories[0].content.title.substring(0, 50)}
-              </p>
-              <p className=" text-justify text-gray-500">
-                {" "}
-                {posts.stories[0].content.description.substring(0, 200)}
-              </p>
-            </div>
+              <div className="flex flex-col mx-4 md:w-1/2">
+                {/* image */}
+                <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
+                  <Image
+                    // src="/rio.jpg"
+                    src={posts.stories[0].content.image.filename}
+                    width={800}
+                    height={800}
+                    className="object-cover"
+                    alt="no image"
+                  />
+                </figure>
+                {/* image */}
+
+                <p className=" font-bold text-xl my-3">
+                  {" "}
+                  {posts.stories[0].content.title.substring(0, 50)}
+                </p>
+                <p className=" text-justify text-gray-500">
+                  {" "}
+                  {posts.stories[0].content.description.substring(0, 200)}
+                </p>
+              </div>
+            </Link>
             {/* card-left */}
 
             {/* card right */}
             <div className="flex flex-col mx-4 md:w-1/2 md:mt-0 mt-4 ">
               {/* single card */}
-              {posts.stories.map((post) => (
+              {postSlice.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`}>
                   <div
                     key={post.id}
@@ -267,7 +271,8 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await fetchAllBlogPosts();
+  // mnampilkan data halaman pertama sebanya 4 data
+  const posts = await fetchAllBlogPosts(1, 4);
   return {
     props: {
       posts,
