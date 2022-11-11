@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { fetchAllBlogPosts } from "../../api/api-storyblok";
+import { fetchAllBlogPosts } from "../../src/api/api-storyblok";
 
 export default function SidebarList({ posts }) {
   return (

@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
+import Nav from "../../components/nav";
+import SidebarList from '../../components/post/sidebar-list'
 import { fetchAllBlogPosts, fetchAllPostSlugs, fetchPost } from "../../src/api/api-storyblok";
-import Nav from "../../src/components/nav";
-import SidebarList from "../../src/components/post/sidebar-list";
+// import Nav from "../../src/components/nav";
+
 
 export default function BlogDefail({ post, posts }) {
   // console.log(post);
@@ -18,8 +20,7 @@ export default function BlogDefail({ post, posts }) {
       </Head>
 
       <main className=" container mx-auto">
-        <Nav />
-
+        <Nav/>
         {/* blog body */}
         <section className="flex md:flex-row flex-col">
           <div className="flex flex-col items-start mt-10 mb-10 md:w-3/4">
