@@ -34,6 +34,7 @@ export default function BlogDefail({ post, posts }) {
                 width={1000}
                 height={800}
                 className="object-cover"
+                alt="no image"
               />
             </figure>
             <div className=" text-gray-600 leading-7 text-justify mx-2 md:mx-0 ">
