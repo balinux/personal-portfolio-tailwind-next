@@ -6,7 +6,6 @@ import Nav from "../src/components/nav";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <div>
       <Head>

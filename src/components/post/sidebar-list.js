@@ -29,6 +29,7 @@ export default function SidebarList({ posts }) {
                 width={500}
                 height={500}
                 className="object-cover "
+                alt=""
               />
               {/* <Image src="/rio.jpg" width={500} height={500} className="object-cover " /> */}
             </figure>
