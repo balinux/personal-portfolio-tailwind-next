@@ -7,7 +7,7 @@ export default function SidebarList({ posts }) {
     <div className="flex flex-col mx-4 md:w-1/2 md:mt-10 mt-4">
       {/* single card */}
       {posts.stories.map((post) => (
-        <Link href={`/blog/${post.slug}`}>
+        <Link key={post.id} href={`/blog/${post.slug}`}>
           <div
             key={post.id}
             className="flex flex-row my-2 h-1/4 justify-between items-center cursor-pointer hover:bg-primary/10"
