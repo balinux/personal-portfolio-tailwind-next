@@ -11,7 +11,7 @@ export const axiosInstance = () => {
     })
 }
 
-export const fetchAllBlogPosts = async (page = 1, per_page = 10, starts_with="blogs/") => {
+export const fetchAllBlogPosts = async (page = 1, per_page = 4, starts_with="blogs/") => {
     try {
         const { data } = await axiosInstance().get("/", {
             params: {
