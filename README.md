@@ -1,4 +1,9 @@
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Ui design references
+- detail blog : https://dribbble.com/shots/15993980-Blog-Photo-Website-concept/attachments/7832474?mode=media
 
 ## Getting Started
 

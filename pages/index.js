@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { fetchAllBlogPosts } from "../src/api/api-storyblok";
+import Nav from "../src/components/nav";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ posts }) {
@@ -19,20 +20,8 @@ export default function Home({ posts }) {
 
       <main className=" container mx-auto">
         {/* navigasi */}
-        <nav className="flex flex-row justify-between items-center h-16 bg-[#FBFBFB] md:px-28">
-          {/* logo */}
-          <div>
-            <p className="text-4xl text-primary font-bold">R.</p>
-          </div>
-
-          {/* menu */}
-          <div className="flex flex-row">
-            <p className="ml-8 font-semibold">Home</p>
-            <p className="ml-8 font-semibold">About</p>
-            <p className="ml-8 font-semibold">Hobby</p>
-            <p className="ml-8 font-semibold">Education</p>
-          </div>
-        </nav>
+        <Nav />
+        {/* navigasi */}
 
         {/* CTA */}
         <section className="pt-5 bg-[#FBFBFB] md:px-28">
@@ -198,7 +187,8 @@ export default function Home({ posts }) {
               {/* image */}
               <figure className=" flex h-1/2 w-full overflow-hidden rounded-lg justify-center">
                 <Image
-                  src="/rio.jpg"
+                  // src="/rio.jpg"
+                  src={posts.stories[0].content.image.filename}
                   width={800}
                   height={800}
                   className="object-cover"
@@ -208,13 +198,11 @@ export default function Home({ posts }) {
 
               <p className=" font-bold text-xl my-3">
                 {" "}
-                consectetur adipiscing elit duis
+                {posts.stories[0].content.title.substring(0, 50)}
               </p>
               <p className=" text-justify text-gray-500">
                 {" "}
-                consectetur adipiscing elit duis tristique sollicitudin nibh sit
-                amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus
-                vitae congue
+                {posts.stories[0].content.description.substring(0, 200)}
               </p>
             </div>
             {/* card-left */}
@@ -223,26 +211,23 @@ export default function Home({ posts }) {
             <div className="flex flex-col mx-4 md:w-1/2 md:mt-0 mt-4 ">
               {/* single card */}
               {posts.stories.map((post) => (
-
-                <Link href={`${post.full_slug}`}>
+                <Link href={`/blog/${post.slug}`}>
                   <div
                     key={post.id}
-                    className="flex flex-row my-2 h-1/4 justify-between items-center cursor-pointer hover:drop-shadow-xl hover:bg-primary/10"
+                    className="flex flex-row my-2 h-1/4 justify-between items-center cursor-pointer hover:bg-primary/10"
                   >
                     <div className="flex flex-col w-1/2">
                       {/* <p className=" font-bold text-md my-3"> {string.substring(0, 100)} {post.content.title}</p> */}
                       <p className=" font-bold text-md my-3">
-                        {" "}
                         {post.content.title.substring(0, 20)}
                       </p>
                       <p className=" text-justify text-gray-500 md:text-sm text-xs ">
-                        {" "}
                         {post.content.description.substring(0, 100)}
                       </p>
                     </div>
 
                     {/* image */}
-                    <figure className=" flex flex-row h-full w-1/3 overflow-hidden rounded-lg justify-center items-center p-5 mx-5 xl:my-5 bg-primary/10">
+                    <figure className=" flex flex-row h-full w-1/3 overflow-hidden rounded-lg justify-center items-center p-5 mx-5 xl:my-5 bg-primary/10 hover:bg-transparent">
                       <Image
                         src={post.content.image.filename}
                         width={500}

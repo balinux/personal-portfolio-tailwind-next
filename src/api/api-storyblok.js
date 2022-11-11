@@ -11,12 +11,13 @@ export const axiosInstance = () => {
     })
 }
 
-export const fetchAllBlogPosts = async (page = 1, per_page = 10) => {
+export const fetchAllBlogPosts = async (page = 1, per_page = 10, starts_with="blogs/") => {
     try {
         const { data } = await axiosInstance().get("/", {
             params: {
                 page,
-                per_page
+                per_page,
+                starts_with
             }
         });
         return data;
@@ -32,4 +33,11 @@ export const fetchPost = async (slug) => {
     } catch (error) {
         return null;
     }
+}
+
+
+export const fetchAllPostSlugs = async() =>{
+    const data = await fetchAllBlogPosts();
+    const slugs = data.stories.map(post => "/blog/"+post.slug);
+    return slugs;
 }
