@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Nav(params) {
@@ -14,7 +14,7 @@ export default function Nav(params) {
     //   {/* logo */}
     //   <div className="flex-shrink-1">
     //     <p className="text-4xl text-primary font-bold">R.</p>
-    //   </div>  
+    //   </div>
 
     //   {/* menu */}
     //   <div className="flex flex-row justify-between flex-shrink-2">
@@ -25,7 +25,7 @@ export default function Nav(params) {
     //   </div>
     // </nav>
 
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-[#FBFBFB]">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ export default function Nav(params) {
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt="Workflow"
                   /> */}
-                  <Link href='/'>
+                  <Link href="/">
                     <div className="block lg:hidden h-8 w-auto cursor-pointer">
                       <p className="text-4xl text-primary font-bold">R.</p>
                     </div>
@@ -59,13 +59,12 @@ export default function Nav(params) {
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                     alt="Workflow"
                   /> */}
-
-                  <div className="hidden lg:block h-8 w-auto">
-                    <p className="text-4xl text-primary font-bold">R.</p>
-                  </div>
+                  <Link href="/">
+                    <div className="hidden lg:block h-8 w-auto cursor-pointer">
+                      <p className="text-4xl text-primary font-bold">R.</p>
+                    </div>
+                  </Link>
                 </div>
-
-
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 ">
@@ -94,8 +93,6 @@ export default function Nav(params) {
                     Blog
                   </a>
                 </div>
-
-
               </div>
             </div>
           </div>
@@ -132,6 +129,5 @@ export default function Nav(params) {
         </>
       )}
     </Disclosure>
-
   );
 }
