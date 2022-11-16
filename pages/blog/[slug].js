@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import DateFormat from "../../components/Date/date-format";
 import Nav from "../../components/nav";
 import SidebarList from '../../components/post/sidebar-list'
 import { fetchAllBlogPosts, fetchAllPostSlugs, fetchPost } from "../../src/api/api-storyblok";
@@ -7,24 +8,80 @@ import { fetchAllBlogPosts, fetchAllPostSlugs, fetchPost } from "../../src/api/a
 
 
 export default function BlogDefail({ post, posts }) {
-  // console.log(post);
+  console.log(post);
+  const {title, image} = post.story.content;
   return (
     <div>
       <Head>
-        <title>Rio Juniyantara Putra Personal Profolio</title>
+        <title>{title}</title>
+
+        <meta
+          name="title"
+          content={title}
+        />
         <meta
           name="description"
-          content="personal website protfolio Oleh Rio Juniyantara Putra"
+          content={title}
         />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://rio-juniyantara-putra.yhotie.com"
+        />
+
+        <meta
+          property="twitter:title"
+          content={
+            title
+          }
+        />
+        <meta
+          property="twitter:description"
+          // content="Turut berduka atas wafatnya syaikh ali jaber (Syaikh Ali Saleh Muhammed Ali Jaber)"
+          content={
+            title
+          }
+        />
+        <meta
+          property="twitter:image"
+          content={image.filename}
+        />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://rio-juniyantara-putra.yhotie.com"
+        />
+        <meta
+          property="og:title"
+          content={title}
+        />
+        <meta
+          property="og:description"
+          content={
+            title
+          }
+        />
+
+        <meta
+          property="og:image"
+          content={image.filename}
+        />
       </Head>
+
 
       <main className=" container mx-auto">
         <Nav/>
         {/* blog body */}
         <section className="flex md:flex-row flex-col">
           <div className="flex flex-col items-start mt-10 mb-10 md:w-3/4">
-            <p className=" text-sm text-gray-400 mb-5">20 Januari 2023</p>
+            {/* <p className=" text-sm text-gray-400 mb-5">20 Januari 2023</p> */}
+            {/* <DateFormat date={post.story.created_at}/> */}
+            <DateFormat date={new Date(post.story.created_at)}/>
             <p className=" md:text-6xl text-3xl font-bold mb-14 leading-tight">
               {post.story.content.title}
             </p>
