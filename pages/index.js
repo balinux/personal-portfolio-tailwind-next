@@ -272,7 +272,7 @@ export default function Home({ posts, portfolio }) {
               {/* single card */}
               {portfolio.stories.map((post) => (
                 // <Link key={post.id} href={`/blog/${post.slug}`}>
-                <Link key={post.id} href={`${post.content.link.url}` } target="_blank" rel="noopener noreferrer">
+                <Link key={post.id} href={`${post.content.link.url}` } >
                   <div
                     key={post.id}
                     className="flex flex-col mx-4 h-full md:w-1/2 justify-between items-center cursor-pointer hover:bg-primary/10"
