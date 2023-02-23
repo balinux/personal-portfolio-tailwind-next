@@ -41,3 +41,19 @@ export const fetchAllPostSlugs = async() =>{
     const slugs = data.stories.map(post => "/blog/"+post.slug);
     return slugs;
 }
+
+// Portfolion
+export const fetchAllPortfolio = async (page = 1, per_page = 4, starts_with="portfolio/") => {
+    try {
+        const { data } = await axiosInstance().get("/", {
+            params: {
+                page,
+                per_page,
+                starts_with
+            }
+        });
+        return data;
+    } catch (error) {
+        return null;
+    }
+}
