@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home({ posts, portfolio }) {
   const postSlice = posts.stories.slice(1);
-  console.log('portfolio', portfolio.stories)
+  // console.log('portfolio', portfolio.stories)
   return (
     <div>
       <Head>
