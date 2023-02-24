@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home({ posts, portfolio }) {
   const postSlice = posts.stories.slice(1);
-  // console.log('portfolio', portfolio.stories[0])
+  console.log('portfolio', portfolio.stories)
   return (
     <div>
       <Head>
@@ -266,57 +266,54 @@ export default function Home({ posts, portfolio }) {
             </div>
           </div>
 
-         
-            {/* card  row*/}
-            <div className="flex md:flex-row flex-col mx-4 md:w-full md:mt-0 mt-4 ">
-              {/* single card */}
-              {portfolio.stories.map((post) => (
-                // <Link key={post.id} href={`/blog/${post.slug}`}>
-                <Link key={post.id} href={`${post.content.link.url}` } >
-                  <div
-                    key={post.id}
-                    className="flex flex-col mx-4 h-full md:w-1/2 justify-between items-center cursor-pointer hover:bg-primary/10"
-                  >
-                    {/* image */}
-                    <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 md:p-0 mx-5 xl:my-5  hover:bg-transparent">
-                      <Image
-                        src={post.content.image.filename}
-                        width={500}
-                        height={500}
-                        className=" object-cover"
-                        alt="no image"
-                        objectFit="cover"
-                      />
-                      {/* <Image src="/rio.jpg" width={500} height={500} className="object-cover " /> */}
-                    </figure>
-                    {/* image */}
 
-                    <div className="flex flex-col w-full">
-                      {/* <p className=" font-bold text-md my-3"> {string.substring(0, 100)} {post.content.title}</p> */}
-                      <div className="flex flex-row w-full ">
-                        {post.content.stack.map((stackItem) => (
-                          <p className="text-justify text-gray-500 md:text-sm text-xs rounded-full px-3 mr-3 bg-primary ">
-                            {stackItem}
-                          </p>
-                        ))}
-                      </div>
+          {/* card  row*/}
+          <div className="flex md:flex-row flex-col mx-4 md:w-full md:mt-0 mt-4 ">
+            {/* single card */}
+            {portfolio.stories.map((post) => (
+              <Link key={post.id} href={`${post.content.link.url}`} >
+                <div
+                  key={post.id}
+                  className="flex flex-col mx-4 h-full md:w-1/2 justify-between items-center cursor-pointer hover:bg-primary/10"
+                >
+                  {/* image */}
+                  <figure className=" flex flex-row h-full w-full overflow-hidden rounded-lg justify-center items-center p-5 md:p-0 mx-5 xl:my-5  hover:bg-transparent">
+                    <Image
+                      src={post.content.image.filename}
+                      width={500}
+                      height={500}
+                      className=" object-cover"
+                      alt="no image"
+                      objectFit="cover"
+                    />
+                    {/* <Image src="/rio.jpg" width={500} height={500} className="object-cover " /> */}
+                  </figure>
+                  {/* image */}
 
-
-                      <p className=" font-bold text-2xl my-6">
-                        {post.content.title.substring(0, 100)}
-                      </p>
-
-                      <p className=" text-justify text-gray-500 md:text-sm text-xs ">
-                        {post.content.description.substring(0, 1000)}
-                      </p>
+                  <div className="flex flex-col w-full">
+                    {/* <p className=" font-bold text-md my-3"> {string.substring(0, 100)} {post.content.title}</p> */}
+                    <div className="flex flex-row w-full ">
+                      {post.content.stack.map((stackItem, index) => (
+                        <p key={index} className="text-justify text-gray-500 md:text-sm text-xs rounded-full px-3 mr-3 bg-primary ">
+                          {stackItem}
+                        </p>
+                      ))}
                     </div>
 
 
+                    <p className=" font-bold text-2xl my-6">
+                      {post.content.title.substring(0, 100)}
+                    </p>
+
+                    <p className=" text-justify text-gray-500 md:text-sm text-xs ">
+                      {post.content.description.substring(0, 1000)}
+                    </p>
                   </div>
-                </Link>
-              ))}
-            </div>
-            {/* card  row */}
+                </div>
+              </Link>
+            ))}
+          </div>
+          {/* card  row */}
         </section>
         {/* Portfolio */}
       </main>
